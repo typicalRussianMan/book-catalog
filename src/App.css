@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+/* App */
+.toggle-edit {
+	border: none;
+	outline: none;
+	font-size: 20px;
+	border-radius: 0 0 5px 0;
+	padding: 5px;
+	background-color: #eee;
+}
+.toggle-edit:hover {
+	background-color: #ccc;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* BooksDisplay */
+.group {
+	background-color: #eee;
+	margin: 10px 0 ;
+	padding: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.group-books {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.book {
+	margin: 2px;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.book-data {
+	margin: 5px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width: 900px) {
+	.group-books {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* BooksEditor */
+.book-edit {
+	width: max-content;
+	margin: 5px;
+	padding: 10px;
+}
+
+.book-edit input {
+	float: right;
+	width: 350px;
+	margin: 2px 0;
+	font-size: 14px;
+}
+
+.book-container {
+	width: 100%;
+	background-color: #eee;
+}
+
+.message-box {
+	background: rgb(255, 193, 193);
+	border: 3px solid rgb(255, 150, 150);
+	font-size: 14px;
 }
