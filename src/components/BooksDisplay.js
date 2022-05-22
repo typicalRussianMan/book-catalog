@@ -55,7 +55,7 @@ export class BooksDisplay extends React.Component {
 	}
 	
 	/**
-	 * when rendering an element with firebase, books are taken and grouped
+	 * when rendering an element, books are taken from firebase and grouped
 	 */
 	async componentDidMount() {
 		const bookData = await this.getBooks()
@@ -177,7 +177,7 @@ export class BooksDisplay extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="books-display">
 				<Header title="Каталог книг"/>
 				<div className="tabs-block">
 					<div className="tabs-header">Группировать по:</div>

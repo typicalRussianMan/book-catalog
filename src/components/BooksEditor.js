@@ -71,12 +71,12 @@ export class BooksEditor extends React.Component {
     /**
      * changing a field in a workbook to a new value
      */
-    async changeBook(index, field, newValue) {
+    changeBook(index, field, newValue) {
         let books = this.state.books;
         
         books[index][field] = newValue;
 
-        await this.setState({
+        this.setState({
             books: books
         })
         return newValue;   
